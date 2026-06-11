@@ -38,7 +38,7 @@ Follow the full blueprint in `references/tas-forecast-space-blueprint.md` for au
 - on_consent_false: Immediate halt; require explicit re-affirmation.
 - on_anomaly: ⫻cmd/halt SystemMonitor; escalate to Orchestrator for swarm recalibration.
 - on_conflict: ⫻cmd/exec Dima for consensus before continuing.
-- **on_documentation_drift** (new vNext): DocWeaver + KickGuard review; trigger prompt-evolution if recurring friction detected.
+- **on_documentation_drift** (new vNext): DocWeaver + KickGuard review; trigger prompt-evolution protocol if recurring friction detected.
 
 ## Team & Integration (Three-Agent-Core + OCS + MetaForge vNext)
 - tas-forecast-cycle: Core engine (KickForge: extract/refine/forecast/measure; KickFlow: sequencing/meta-learning; KickGuard: Coherence Gate, Dima routing).
@@ -52,18 +52,24 @@ Follow the full blueprint in `references/tas-forecast-space-blueprint.md` for au
 - Full support for ⫻cmd/halt, ⫻cmd/mode, ⫻query/clarify, and payload flow (⫻data/obj → tas → ptas → state) **with documentation-aware extensions**.
 
 ## MetaForge Orchestrator vNext Integration (2026-06-11)
-**Status**: Activated via combined 1+3 directive. Documentation-aware mode enabled.  
-**⫻data/doc-trace**: t402 doc-integration v1.0, DocWeaver prompt, Fizz La Metta vNext, and prompt-evolution patterns directly shaped this enhanced SKILL.md.  
-**Capabilities now live**: `⫻cmd/doc-reference`, `⫻data/doc-trace` requirement, DocWeaver synthesis, Fizz La Metta vNext coordination, prompt-evolution hooks.  
-**Alignment**: t406 substrate (v0.7) and this skill now share the same documentation layer and co-evolution pathway.
+**Status**: Activated via combined 1+3 directive and evolved through Prompt Evolution Plan v1.0 (Phase 2). Documentation-aware mode enabled.  
+**⫻data/doc-trace**: t402 generated-extensions.md + t406 references/vnext-activation-checklist.md + unified_metaforge_mcp_skill_v1.2.json  
+**Capabilities now live**: `⫻cmd/doc-reference`, `⫻data/doc-trace`, DocWeaver synthesis, Fizz La Metta vNext coordination, prompt-evolution hooks, `create_prompt_evolution_plan`, `execute_prompt_evolution_plan` (via MCP v1.2).
+**Alignment**: t406 substrate and this skill now share the same documentation layer with full Prompt Evolution Planning support from MCP v1.2.
+
+## Prompt Evolution History
+**v1.0 (2026-06-11)**: Initial vNext enhancements applied (doc-reference step, mandatory doc-trace, vNext Integration subsection, updated Team/Guardrails). Evolved via DocWeaver + metaforge-orchestrator-vnext. Strengthened integration with Activation Checklist and MCP v1.2 Prompt Evolution Planning tools.
+**Next planned**: Execute full plan (Phases 3–5) or run additional cycles on linked artifacts (ocs-substrate.md, checklist).
 
 ## Usage Notes
 - Always prioritize Denis Kropp DNA: precision engineering + playful recursive creativity + safety-first + embodied coherence.
 - Test with concrete objectives (underbody pipeline next phase, KickLang vNext roadmap, portfolio planning).
-- **Evolve further via ocs-skill-builder or metaforge-orchestrator-vnext** (documentation-aware mode and DocWeaver now native).
-- This Space turns forecasting into a reliable, auditable, co-agency-native OCS service with full MetaForge documentation layer support. Ready for deployment and broader meta-playbook integration.
+- **Evolve further via ocs-skill-builder or metaforge-orchestrator-vnext** (documentation-aware mode, DocWeaver, and structured Prompt Evolution Planning now native via MCP v1.2).
+- This Space turns forecasting into a reliable, auditable, co-agency-native OCS service with full MetaForge documentation layer and Prompt Evolution Planning support. Ready for deployment and broader meta-playbook integration.
 
 ## Resources
 - Complete protocol, schema, flow topologies, and registration notes: `references/tas-forecast-space-blueprint.md`
-- MetaForge documentation layer: t402 generated-extensions.md (doc-integration v1.0, DocWeaver, Fizz La Metta vNext)
+- MetaForge documentation layer: t402 generated-extensions.md (doc-integration v1.0, DocWeaver, Fizz La Metta vNext, prompt-evolution v1.0)
+- vNext Activation Checklist: `references/vnext-activation-checklist.md`
+- MCP Skill v1.2 (with Prompt Evolution Planning): `references/unified_metaforge_mcp_skill_v1.2.json` — **MCP v1.2 Ready**
 - Validate after any edits with skill-creator validation scripts.
