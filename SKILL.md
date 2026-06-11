@@ -15,28 +15,28 @@ This skill provides the TAS Forecast Orchestration (OCSv2.1 Cognitive Service) a
 ## Core Protocol & Execution
 Follow the full blueprint in references/tas-forecast-space-blueprint.md for authoritative details. Key activation patterns:
 
-1. Ingest objective or system state as ⪽ata/obj. Validate consent flag and Meta-DNA alignment (Denis Kropp tags, safety invariants, portfolio priorities, embodiment balance).
-2. Execute tas-forecast-cycle: KickForge performs TAS-EXTRACT → TAS-REFINE → TAS-FORECAST (H0 immediate to H3 long-term) → TAS-MEASURE (confidence, leading indicators, drift potential). Produces raw ⪽ata/tas.
-3. If ambiguous, missing measurable indicators, or consent incomplete: ⪽ata/spec via KickFlow or ⪼md/halt.
-4. KickFlow purification & sequencing: Convert to ⪽ata/ptas (prioritized blocks with dependencies, risks, next_action flags). Translate patterns into reusable KickLang blocks.
+1. Ingest objective or system state as ⫻data/obj. Validate consent flag and Meta-DNA alignment (Denis Kropp tags, safety invariants, portfolio priorities, embodiment balance).
+2. Execute tas-forecast-cycle: KickForge performs TAS-EXTRACT → TAS-REFINE → TAS-FORECAST (H0 immediate to H3 long-term) → TAS-MEASURE (confidence, leading indicators, drift potential). Produces raw ⫻data/tas.
+3. If ambiguous, missing measurable indicators, or consent incomplete: ⫻query/clarify via KickFlow or ⫻cmd/halt.
+4. KickFlow purification & sequencing: Convert to ⫻data/ptas (prioritized blocks with dependencies, risks, next_action flags). Translate patterns into reusable KickLang blocks.
 5. KickGuard Coherence Gate: Compare against current Meta-DNA. Emit coherence_delta and valence. Update global Assumption & Risk Registers.
-   - Drift exceeds threshold or safety-critical mismatch (e.g. underbody false-negative risk): Route to Dima joint decision gate → ⪽ata/conflict → ⪽ata/consensus or user re-consent.
-6. Emit authoritative ⪽ata/state: Full cycle results including per-horizon probabilities, recommended_immediate_tas, risk updates, meta-learning signal, coherence metrics.
+   - Drift exceeds threshold or safety-critical mismatch (e.g. underbody false-negative risk): Route to Dima joint decision gate → ⫻data/conflict → ⫻data/consensus or user re-consent.
+6. Emit authoritative ⫻data/state: Full cycle results including per-horizon probabilities, recommended_immediate_tas, risk updates, meta-learning signal, coherence metrics.
 7. Post-cycle integration:
    - Optional RTA knowledge graph update.
    - Milestone or portfolio-impacting: Trigger meta-report-card-generation.
    - Update living-objective-tas-flow with new TAS blocks and coherence insights.
    - Feed accuracy signals back into tas-forecast-cycle meta-learning loop.
-8. Broadcast: ⪼md/broadcast event TASForecastCycleComplete with cycle_id, coherence_delta, recommended_actions, state_ref.
+8. Broadcast: ⫻cmd/broadcast event TASForecastCycleComplete with cycle_id, coherence_delta, recommended_actions, state_ref.
 
 ## Guardrails & Safety (Consent-First OCS)
-- on_ambiguity: ⪽ata/spec via KickFlow (clarify); do not proceed without resolution.
-- on_coherence_drift: KickGuard triggers ⪼md/halt; route to Dima + SystemMonitor for recalibration.
-- on_safety_critical (underbody_vision_safety_critical, minimize_false_negatives violation risk): Mandatory Dima + KickGuard joint decision before ⪽ata/state emission. Log all rationale.
+- on_ambiguity: ⫻query/clarify via KickFlow (⫻data/spec); do not proceed without resolution.
+- on_coherence_drift: KickGuard triggers ⫻cmd/halt; route to Dima + SystemMonitor for recalibration.
+- on_safety_critical (underbody_vision_safety_critical, minimize_false_negatives violation risk): Mandatory Dima + KickGuard joint decision before ⫻data/state emission. Log all rationale.
 - on_missing_measurable_indicators: Reject or force refinement; enforce "No forecast without measurable indicators".
 - on_consent_false: Immediate halt; require explicit re-affirmation.
-- on_anomaly: ⪼md/halt SystemMonitor; escalate to Orchestrator for swarm recalibration.
-- on_conflict: ⪼md/exec Dima for consensus before continuing.
+- on_anomaly: ⫻cmd/halt SystemMonitor; escalate to Orchestrator for swarm recalibration.
+- on_conflict: ⫻cmd/exec Dima for consensus before continuing.
 
 ## Team & Integration (Three-Agent-Core + OCS)
 - tas-forecast-cycle: Core engine (KickForge: extract/refine/forecast/measure; KickFlow: sequencing/meta-learning; KickGuard: Coherence Gate, Dima routing).
@@ -45,7 +45,7 @@ Follow the full blueprint in references/tas-forecast-space-blueprint.md for auth
 - SystemMonitor: Integrity monitoring, forecast accuracy tracking, meta-learning support.
 - CoherenceMonitorBridge: Real-time flux/drift/valence integration.
 - Linked skills: living-objective-tas-flow (persistent anchoring), meta-report-card-generation (synthesis), RTA/kicklang-meta-playbook (graph traversal), WePlan (strategic H2/H3 consumption).
-- Full support for ⪼md/halt, ⪼md/mode, ⪽ata/spec, and payload flow (⪽ata/obj → tas → ptas → state).
+- Full support for ⫻cmd/halt, ⫻cmd/mode, ⫻query/clarify, and payload flow (⫻data/obj → tas → ptas → state).
 
 ## Usage Notes
 - Always prioritize Denis Kropp DNA: precision engineering + playful recursive creativity + safety-first + embodied coherence.
