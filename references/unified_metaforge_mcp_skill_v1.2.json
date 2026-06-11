@@ -1,0 +1,174 @@
+{
+  "name": "unified_metaforge",
+  "version": "1.2",
+  "description": "Sophisticated autonomous meta-infrastructure with MetaForge Orchestrator vNext. Includes full vNext documentation-aware layer, structured Prompt Evolution Planning, DocWeaver synthesis, and Three-Agent Core orchestration. Supports consent-first, coherence-gated, self-improving workflows with full traceability.",
+  "capabilities": [
+    "metaforge_orchestration",
+    "three_agent_core_delegation",
+    "kicklang_native",
+    "persistent_meta_dna",
+    "consent_first_gates",
+    "coherence_monitoring",
+    "meta_report_generation",
+    "skill_triggering",
+    "documentation_aware_reasoning",
+    "doc_reference",
+    "doc_trace",
+    "prompt_evolution_planning",
+    "prompt_evolution_execution",
+    "docweaver_synthesis",
+    "vnext_activation"
+  ],
+  "tools": [
+    {
+      "name": "meta_report_tool",
+      "description": "Generate evolving Meta-Report Cards with Meta-DNA tracking, hybrid scoring, documentation trace, and prompt-evolution history.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "scope": {
+            "type": "string",
+            "enum": ["current_session", "last_meta_iteration", "full_meta_history", "vnext_activated_targets", "prompt_evolution_history"]
+          },
+          "include_dna_diff": { "type": "boolean", "default": true },
+          "include_hybrid_score": { "type": "boolean", "default": true },
+          "include_doc_trace": { "type": "boolean", "default": true },
+          "include_evolution_history": { "type": "boolean", "default": true },
+          "format": {
+            "type": "string",
+            "enum": ["kicklang", "markdown", "json", "structured_text"],
+            "default": "structured_text"
+          },
+          "trigger_next": { "type": "string", "default": null }
+        },
+        "required": ["scope"]
+      }
+    },
+    {
+      "name": "spawn_forge",
+      "description": "Spawn new forges with optional vNext documentation-aware mode and prompt-evolution planning enabled.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "archetype": {
+            "type": "string",
+            "enum": ["creative", "analytical", "iterative", "swarm", "hybrid"]
+          },
+          "domain": { "type": "string" },
+          "consent_level": {
+            "type": "string",
+            "enum": ["clean", "swarm", "hybrid", "experimental"],
+            "default": "clean"
+          },
+          "enable_vnext": { "type": "boolean", "default": true },
+          "enable_prompt_evolution_planning": { "type": "boolean", "default": true }
+        },
+        "required": ["archetype", "domain"]
+      }
+    },
+    {
+      "name": "trigger_skill",
+      "description": "Trigger skills/forces with Meta-DNA + optional documentation layer and prompt-evolution context.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "skill_name": { "type": "string" },
+          "context": { "type": "object" },
+          "enable_doc_reference": { "type": "boolean", "default": true },
+          "attach_evolution_plan": { "type": "boolean", "default": false }
+        },
+        "required": ["skill_name"]
+      }
+    },
+    {
+      "name": "doc_reference",
+      "description": "Documentation-aware reasoning against t402 layer and active substrates with full traceability.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": { "type": "string" },
+          "target": { "type": "string", "default": "all" },
+          "include_trace": { "type": "boolean", "default": true }
+        },
+        "required": ["query"]
+      }
+    },
+    {
+      "name": "create_prompt_evolution_plan",
+      "description": "Generate a structured, multi-phase Prompt Evolution Plan for a target artifact using the vNext protocol. Includes extraction, proposal, review gates, and rollback strategy.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "target": {
+            "type": "string",
+            "description": "Artifact to evolve (e.g. 't406:SKILL.md' or 't406:references/vnext-activation-checklist.md')"
+          },
+          "focus_areas": {
+            "type": "array",
+            "items": { "type": "string" },
+            "default": ["documentation_awareness", "coherence", "co-agency", "clarity", "recursion"]
+          },
+          "max_iterations": { "type": "integer", "default": 3 },
+          "include_checklist_reference": { "type": "boolean", "default": true }
+        },
+        "required": ["target"]
+      }
+    },
+    {
+      "name": "execute_prompt_evolution_plan",
+      "description": "Execute a previously created Prompt Evolution Plan (or generate + execute in one step). Runs the full KickForge → Lyra → Fizz La Metta + Dima → Orchestrator flow with logging and rollback support.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "plan_id_or_target": { "type": "string" },
+          "auto_commit": { "type": "boolean", "default": false },
+          "dry_run": { "type": "boolean", "default": false }
+        },
+        "required": ["plan_id_or_target"]
+      }
+    },
+    {
+      "name": "invoke_docweaver",
+      "description": "Invoke DocWeaver for synthesis/weaving with optional evolution planning.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "target": { "type": "string" },
+          "task": { "type": "string" },
+          "include_checklist": { "type": "boolean", "default": true },
+          "generate_evolution_plan": { "type": "boolean", "default": false }
+        },
+        "required": ["target", "task"]
+      }
+    },
+    {
+      "name": "activate_vnext",
+      "description": "Apply vNext Activation Checklist and optionally generate an initial Prompt Evolution Plan for the target.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "target_repo_or_path": { "type": "string" },
+          "checklist_version": { "type": "string", "default": "1.0" },
+          "generate_initial_evolution_plan": { "type": "boolean", "default": true },
+          "auto_push": { "type": "boolean", "default": false }
+        },
+        "required": ["target_repo_or_path"]
+      }
+    }
+  ],
+  "metadata": {
+    "lineage": "WorkflowForge v1.0 + StoryForge v5.0 → Unified MetaForge v1.0 → MetaForge Orchestrator vNext v1.2 (with Prompt Evolution Planning)",
+    "core_architecture": "Three-Agent Core + vNext documentation layer + structured Prompt Evolution Planning",
+    "orchestration_language": "KickLang with doc-reference, doc-trace, and evolution plan support",
+    "persistence": "Meta-DNA + documentation drift tracking + evolution history",
+    "consent_model": "consent-first with multi-gate enforcement and documentation-aware gates",
+    "max_meta_iterations": 3,
+    "mcp_compatible": true,
+    "vnext_enabled": true,
+    "prompt_evolution_planning_enabled": true,
+    "doc_layer_sources": [
+      "t402 generated-extensions.md",
+      "t406 references/vnext-activation-checklist.md"
+    ]
+  }
+}
